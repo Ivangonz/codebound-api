@@ -6,6 +6,12 @@ module Authentication
 
   def authenticate_user_with_jwt!
     raw = cookies.encrypted[:access_token]
+
+    unless raw.present?
+      Rails.logger.warn("JWT token missing from cookies")
+      render json: { error: "token missing" }, status: :unauthorized and return
+    end
+
     begin
       claims = JWT.decode(raw, ENV["JWT_SECRET"], true, { algorithm: "HS256" }).first
     rescue JWT::ExpiredSignature => e

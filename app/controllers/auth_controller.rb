@@ -35,7 +35,7 @@ class AuthController < ApplicationController
   end
 
   def jwt_secret
-    ENV["JWT_SECRET"]
+    ENV.fetch("JWT_SECRET").presence || raise("JWT_SECRET environment variable is empty")
   end
 
   def frontend_url
