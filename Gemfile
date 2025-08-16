@@ -33,6 +33,8 @@ gem "thruster", require: false
 # gem "image_processing", "~> 1.2"
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
+gem "rack-cors"
+gem "jwt"
 gem "omniauth"
 gem "omniauth-github", "~> 2.0"
 gem "omniauth-rails_csrf_protection"
@@ -48,4 +50,5 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 
   gem "dotenv-rails"
+  gem "rspec-rails"
 end
