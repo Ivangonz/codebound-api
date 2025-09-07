@@ -1,0 +1,12 @@
+{
+  "include": ["app"],
+  "exclude": ["**/__pycache__"],
+  "typeCheckingMode": "strict",
+  "reportMissingTypeStubs": "warning",
+  "reportUnknownMemberType": "warning",
+  "reportUnknownVariableType": "warning",
+  "reportUntypedFunctionDecorator": "warning",
+  "pythonVersion": "3.11",
+  "venvPath": ".",
+  "venv": ".venv"
+}

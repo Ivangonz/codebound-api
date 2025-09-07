@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "codebound-api"
+version = "0.1.0"
+description = ""
+authors = ["Ivan Gonzalez"]
+readme = "README.md"
+packages = [{ include = "app" }]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+fastapi = "^0.114"
+uvicorn = { extras = ["standard"], version = "^0.30" }
+httpx = "^0.27"
+PyJWT = "^2.9"
+pydantic-settings = "^2.4"
+redis = "^5.0"
+python-dotenv = "^1.0"
+
+[tool.poetry.group.dev.dependencies]
+pyright = "^1.1.375"
+ruff = "^0.6.8"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+select = ["E","F","I","UP","B"]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
