@@ -19,6 +19,7 @@ python-dotenv = "^1.0"
 [tool.poetry.group.dev.dependencies]
 pyright = "^1.1.375"
 ruff = "^0.6.8"
+invoke = "^2.2.0"
 
 [tool.ruff]
 line-length = 100
